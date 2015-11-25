@@ -1,0 +1,3 @@
+mysql> select substring_index(substring_index(content, '@', -1), '.', 1) from ElectronicMail group by content order by content desc;
+
+I did group by content and order by content desc to more quickly check for duplicate domain names. There seems to be 2300 unique domain names.
