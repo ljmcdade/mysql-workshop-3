@@ -1,0 +1,85 @@
+First I did this to find the addressBookId from Entry by searching for the AddressBook id of Pharetra Ut Limited:
+
+mysql> select id, name from AddressBook where name='Pharetra Ut Limited';                                                              
++----+---------------------+
+| id | name                |
++----+---------------------+
+| 10 | Pharetra Ut Limited |
++----+---------------------+
+1 row in set (0.00 sec)
+
+Not sure if this is cheating, but it was quick and made sense to me.
+
+Then:
+
+mysql> select CONCAT(UCASE(LEFT(firstName, 1)), LCASE(SUBSTRING(firstName, 2, LENGTH(firstName)-2)), UCASE(RIGHT(firstName, 1))) from Entry where addressBookId=10;                                                                                                           
++--------------------------------------------------------------------------------------------------------------------+
+| CONCAT(UCASE(LEFT(firstName, 1)), LCASE(SUBSTRING(firstName, 2, LENGTH(firstName)-2)), UCASE(RIGHT(firstName, 1))) |
++--------------------------------------------------------------------------------------------------------------------+
+| ZeleniA                                                                                                            |
+| AbduL                                                                                                              |
+| IdolA                                                                                                              |
+| IllanA                                                                                                             |
+| WinifreD                                                                                                           |
+| BuckminsteR                                                                                                        |
+| HeidI                                                                                                              |
+| NelL                                                                                                               |
+| CiarA                                                                                                              |
+| SylviA                                                                                                             |
+| CaryN                                                                                                              |
+| DieteR                                                                                                             |
+| JamaliA                                                                                                            |
+| HerroD                                                                                                             |
+| UnitY                                                                                                              |
+| PascalE                                                                                                            |
+| ColtoN                                                                                                             |
+| JamaL                                                                                                              |
+| AbeL                                                                                                               |
+| ZenA                                                                                                               |
+| PrescotT                                                                                                           |
+| IdonA                                                                                                              |
+| PalomA                                                                                                             |
+| NevE                                                                                                               |
+| KylA                                                                                                               |
+| KimberleY                                                                                                          |
+| JilliaN                                                                                                            |
+| AddisoN                                                                                                            |
+| JacquelinE                                                                                                         |
+| SashA                                                                                                              |
+| LeE                                                                                                                |
+| SalvadoR                                                                                                           |
+| YokO                                                                                                               |
+| StacY                                                                                                              |
+| HaleE                                                                                                              |
+| BlythE                                                                                                             |
+| TaD                                                                                                                |
+| HaleY                                                                                                              |
+| LarA                                                                                                               |
+| SummeR                                                                                                             |
+| LatifaH                                                                                                            |
+| FaitH                                                                                                              |
+| StaceY                                                                                                             |
+| JennifeR                                                                                                           |
+| FultoN                                                                                                             |
+| ColiN                                                                                                              |
+| ThanE                                                                                                              |
+| CaryN                                                                                                              |
+| BO                                                                                                                 |
+| JamaL                                                                                                              |
+| AmenA                                                                                                              |
+| MelaniE                                                                                                            |
+| DriscolL                                                                                                           |
+| GaretH                                                                                                             |
+| ColT                                                                                                               |
+| MarthA                                                                                                             |
+| SierrA                                                                                                             |
+| NitA                                                                                                               |
+| CelestE                                                                                                            |
+| KathleeN                                                                                                           |
+| SamueL                                                                                                             |
+| AaroN                                                                                                              |
+| CheyennE                                                                                                           |
+| BretT                                                                                                              |
+| RebekaH                                                                                                            |
++--------------------------------------------------------------------------------------------------------------------+
+65 rows in set (0.01 sec)
