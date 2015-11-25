@@ -1,0 +1,19 @@
+mysql> select Phone.content from Entry JOIN Phone on Entry.id=Phone.entryId where firstName='Charlotte' and lastName='Jenkins';        
++----------------+
+| content        |
++----------------+
+| (110) 167-3420 |
+| (605) 175-1334 |
++----------------+
+2 rows in set (0.02 sec)
+
+to confirm:
+
+mysql> select * from Phone where entryId=1057;
++------+---------+-------+----------+----------------+
+| id   | entryId | type  | subtype  | content        |
++------+---------+-------+----------+----------------+
+|  659 |    1057 | other | fax      | (110) 167-3420 |
+| 1599 |    1057 | home  | landline | (605) 175-1334 |
++------+---------+-------+----------+----------------+
+2 rows in set (0.00 sec)
