@@ -1,0 +1,50 @@
+mysql> select lower(country),count(*) from Address group by country order by country desc;                                             
++----------------------------------------------+----------+
+| lower(country)                               | count(*) |
++----------------------------------------------+----------+
+| åland islands                                |       11 |
+| zimbabwe                                     |       10 |
+| zambia                                       |       10 |
+| yemen                                        |        8 |
+| western sahara                               |        9 |
+| wallis and futuna                            |       15 |
+| virgin islands, united states                |       12 |
+| virgin islands, british                      |        9 |
+| viet nam                                     |        6 |
+| venezuela                                    |       13 |
+| vanuatu                                      |       11 |
+| uzbekistan                                   |        8 |
+| uruguay                                      |        9 |
+| united states minor outlying islands         |       15 |
+| united states                                |       10 |
+| united kingdom (great britain)               |       14 |
+| united arab emirates                         |       14 |
+| ukraine                                      |       11 |
+| uganda                                       |        8 |
+| tuvalu                                       |        9 |
+| turks and caicos islands                     |       11 |
+| turkmenistan                                 |        9 |
+| turkey                                       |       12 |
+| tunisia                                      |       10 |
+| trinidad and tobago                          |        5 |
+| tonga                                        |       13 |
+| tokelau                                      |       10 |
+| togo                                         |        6 |
+| timor-leste                                  |       10 |
+| thailand                                     |       15 |
+| tanzania                                     |       11 |
+| tajikistan                                   |        9 |
+| taiwan                                       |       10 |
+| syria                                        |       12 |
+| switzerland                                  |       13 |
+| sweden                                       |        5 |
+| antarctica                                   |       10 |
+| anguilla                                     |       12 |
+| angola                                       |        6 |
+| andorra                                      |       15 |
+| american samoa                               |        8 |
+| algeria                                      |       10 |
+| albania                                      |        9 |
+| afghanistan                                  |       10 |
++----------------------------------------------+----------+
+249 rows in set (0.00 sec)
